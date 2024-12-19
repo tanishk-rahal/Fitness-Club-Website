@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('fitness club main png.webp') no-repeat center center fixed;
+    background-size: cover; /* To properly fit the background image */
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header Styles */
+.header {
+    padding: 20px 0;
+    background: rgba(30, 30, 30, 0.8);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-left, .nav-right {
+    flex: 1;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff9800;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff9800;
+}
+
+.logo-container {
+    text-align: center;
+    flex: 1;
+    transition: transform 3s ease;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    box-shadow: 0 0 20px #ff9800;
+}
+
+.glowing-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #ff9800;
+    margin-top: 10px;
+    text-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800, 0 0 30px #ff9800;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800, 0 0 30px #ff9800;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff9800, 0 0 30px #ff9800, 0 0 40px #ff9800;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(30, 30, 30, 0.6);
+}
+
+.hero h2 {
+    margin: 0 0 30px;
+    font-size: 2.5rem;
+}
+
+#cta-button {
+    background-color: #ff9800;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cta-button:hover {
+    background-color: #ffa733;
+}
+
+/* About, Services, and Contact Sections */
+.about, .services, .contact, .plans {
+    padding: 60px 20px;
+    background: rgba(30, 30, 30, 0.7);
+    text-align: center;
+    transition: transform 1.5s ease-in-out;
+}
+
+.about h2, .services h2, .contact h2, .plans h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.service-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    transition: transform 1.5s ease;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+.plan {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 1.5s ease;
+}
+
+.plan h3 {
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+.contact-info {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.sign-in-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-modal .wrapper {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 20px #ff9800;
+}
+
+.sign-in-form label {
+    color: #fff;
+}
+
+.sign-in-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.sign-in-form button {
+    background-color: #ff9800;
+    color: #000;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-in-form button:hover {
+    background-color: #ffa733;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-list {
+        flex-direction: column;
+    }
+
+    .plans {
+        flex-direction: column;
+    }
+
+    .about h2, .services h2, .contact h2, .plans h2 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+/* Hidden class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Additional Styles for the Sign-In and Sign-Up Forms */
+.sign-in-modal .wrapper {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 20px #ff9800;
+}
+
+.sign-in-form label, .sign-up-form label {
+    color: #fff;
+}
+
+.sign-in-form input, .sign-up-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.sign-in-form button, .sign-up-form button {
+    background-color: #ff9800;
+    color: #000;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-in-form button:hover, .sign-up-form button:hover {
+    background-color: #ffa733;
+}

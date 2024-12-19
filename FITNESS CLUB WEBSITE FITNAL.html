@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym and Yoga Center</title>
+    <link rel="stylesheet" href="fitopiaSTYLE.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Left Side: Home & About -->
+            <div class="nav-left">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>     
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#plans">Plans</a></li>
+                    </ul>      
+                </nav>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="logo-container">
+                <img src="logo for Fitopia fitness club.png" alt="Fitopia Fitness Club Logo" class="logo">
+                <h1 class="glowing-text">Welcome to FITOPIA</h1>
+            </div>
+
+            <!-- Right Side: Services & Contact -->
+            <div class="nav-right">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#services">Services</a></li>
+                       
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="sign in.html" id="sign-in-btn">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Your Journey to Fitness Starts Here</h2>
+       <a href="sign in.html" >
+        <button id="cta-button" >Join Now</button> 
+        </a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>FitLife Gym & Yoga offers a holistic approach to health and wellness. With state-of-the-art equipment and expert trainers, we cater to both gym enthusiasts and yoga lovers. Our mission is to provide personalized fitness journeys, from strength training to yoga for mind-body wellness, creating an inclusive environment for all fitness levels.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">
+                <h3>Gym Facilities</h3>
+                <p>Top-notch equipment, personal trainers, cardio zones, weightlifting sections, and a variety of fitness classes like HIIT, Zumba, and Strength Training.</p>
+                <p>Operating Hours: 6 AM - 10 PM</p>
+            </div>
+            <div class="service">
+                <h3>Yoga Classes</h3>
+                <p>Join our serene yoga sessions to relax your mind and rejuvenate your body. Classes for all levels: beginner, intermediate, and advanced.</p>
+                <p>Class Timings: 7 AM, 10 AM, 5 PM, 8 PM</p>
+            </div>
+            <div class="service">
+                <h3>Personal Trainers</h3>
+                <p>Get one-on-one sessions with certified personal trainers to achieve your fitness goals faster. Tailored workout plans and progress tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" class="plans">
+        <h2>Our Plans</h2>
+        <div class="plan">
+            <h3>Silver Plan</h3>
+            <p>Basic gym access with the essential equipment. Ideal for beginners.</p>
+            <p>Price: ₹799/month</p>
+        </div>
+        <div class="plan">
+            <h3>Golden Plan</h3>
+            <p>Access to premium gym facilities with yoga classes and programs.</p>
+            <p>Price: ₹1199/month</p>
+        </div>
+        <div class="plan">
+            <h3>Platinum Plan</h3>
+            <p>All-access membership with personal trainer and premium classes.</p>
+            <p>Price: ₹1499/month</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +91 123 456 7890</p>
+            <p><strong>Location:</strong> Fitopia Fitness Club, XYZ Street, Ghaziabad</p>
+            <a href="https://maps.google.com/?q=Fitopia+Fitness+Club" target="_blank">View on Google Maps</a>
+        </div>
+    </section>
+
+    <section id="sign-in" class="sign-in-modal">
+        <div class="wrapper">
+            <form id="sign-in-form" class="sign-in-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Sign In</button>
+                <p>Don't have an account? <a href="#" id="switch-to-sign-up">Sign Up</a></p>
+            </form>
+
+            <form id="sign-up-form" class="sign-up-form hidden">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="switch-to-sign-in">Sign In</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            // Switch to Sign Up Form
+            $('#switch-to-sign-up').click(function() {
+                $('#sign-in-form').addClass('hidden');
+                $('#sign-up-form').removeClass('hidden');
+            });
+
+            // Switch to Sign In Form
+            $('#switch-to-sign-in').click(function() {
+                $('#sign-up-form').addClass('hidden');
+                $('#sign-in-form').removeClass('hidden');
+            });
+
+            // Join Now Button directs to Sign Up
+            $('#cta-button').click(function() {
+                window.location.href = '#sign-in';
+            });
+        });
+    </script>
+</body>
+</html>
